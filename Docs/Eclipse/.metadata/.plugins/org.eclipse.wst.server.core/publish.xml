@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<publish-info>
+  <server id="App Engine Standard at localhost (3)" path="publish2.dat"/>
+  <server id="App Engine Standard at localhost (2)" path="publish1.dat"/>
+  <server id="App Engine Standard at localhost (7)" path="publish6.dat"/>
+  <server id="App Engine Standard at localhost (6)" path="publish5.dat"/>
+  <server id="App Engine Standard at localhost (5)" path="publish4.dat"/>
+  <server id="App Engine Standard at localhost (4)" path="publish3.dat"/>
+  <server id="App Engine Standard at localhost" path="publish0.dat"/>
+</publish-info>

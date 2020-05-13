@@ -1,0 +1,126 @@
+/* [class*="col-"] {
+    border:1px solid black;
+    border-radius: 6px;
+    overflow-wrap: break-word;
+} */
+.header {
+    height: 70px;
+    line-height: 70px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    background: #111111;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: default;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10001;
+}
+.header > .logo {
+    color: #ffffff;
+    font-size: 2em;
+    font-weight: 700;
+    height: inherit;
+    line-height: inherit;
+    padding: 0 4em;
+    text-decoration: none;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+    line-height: 1.8em;
+    padding-top: 90px;
+    background-color: #fff;
+}
+.main{
+    font-size: 29px;
+    font-weight: 900;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+}
+.rating-box{
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+    border: #F0F0F0;
+    border-radius: 8px;
+    background-color: #F0F0F0;
+    display: block;
+}
+.rating-box p{
+    font-size: 18px;
+    font-weight: 700;
+    display: block;
+    clear: both;
+    margin: 30px 0px 0px 30px;
+    text-align: left;
+    color: #7e7e7e;
+    white-space: normal;
+}
+.stars{
+    display: block;
+    margin-left: 30px;
+    margin-right: -60px;
+    text-align: left;
+}
+.star {
+    background: #A0A0A0;
+    border-radius: 50%;
+    height: 50px;
+    position: relative;
+    width: 50px;
+    cursor: pointer;
+    display: inline-table;
+}
+.star-content {
+    color: #fff;
+    display:table-cell;
+    vertical-align:middle;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+}
+.stars > span.star.hover1{
+    background-color:#ff0000;
+}
+.stars > span.star.hover2{
+    background-color:#ff8000;
+}
+.stars > span.star.hover3{
+    background-color:#FFCC36;
+}
+.stars > span.star.hover4{
+    background-color:#00ff40;
+}
+.stars > span.star.hover5{
+    background-color:#007d00;
+}
+.star-text{
+    font-size: 15px;
+    color:#A0A0A0;
+    display: block;
+    margin-left: 30px;
+    text-align: left;
+}
+.body-review{
+    display: none;
+}
+.form-review{
+    margin: 0px 0px 0px 30px;
+}
+.form-review p{
+    font-size: 18px;
+    font-weight: 700;
+    display: block;
+    clear: both;
+    margin-left: 0;
+    margin-top: 10px;
+    text-align: left;
+    color: #7e7e7e;
+    white-space: normal;
+}

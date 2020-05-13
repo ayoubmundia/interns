@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<servers>
+  <server auto-publish-setting="2" auto-publish-time="0" hostname="localhost" id="App Engine Standard at localhost" name="App Engine Standard at localhost" runtime-id="App Engine Standard Runtime" server-type="com.google.cloud.tools.eclipse.appengine.standard.server" server-type-id="com.google.cloud.tools.eclipse.appengine.standard.server" start-timeout="240" stop-timeout="240" timestamp="0">
+    <list key="app-engine-server-modules-list" value0="org.eclipse.jst.jee.server:freeProject"/>
+    <list key="modules" value0="freeProject::org.eclipse.jst.jee.server:freeProject::jst.web::3.1"/>
+  </server>
+  <server auto-publish-setting="2" auto-publish-time="0" hostname="localhost" id="App Engine Standard at localhost (2)" name="App Engine Standard at localhost (2)" runtime-id="App Engine Standard Runtime" server-type="com.google.cloud.tools.eclipse.appengine.standard.server" server-type-id="com.google.cloud.tools.eclipse.appengine.standard.server" start-timeout="240" stop-timeout="240" timestamp="0">
+    <list key="app-engine-server-modules-list" value0="org.eclipse.jst.jee.server:review"/>
+    <list key="modules" value0="review::org.eclipse.jst.jee.server:review::jst.web::3.1"/>
+  </server>
+  <server auto-publish-setting="2" auto-publish-time="0" hostname="localhost" id="App Engine Standard at localhost (3)" name="App Engine Standard at localhost (3)" runtime-id="App Engine Standard Runtime" server-type="com.google.cloud.tools.eclipse.appengine.standard.server" server-type-id="com.google.cloud.tools.eclipse.appengine.standard.server" start-timeout="240" stop-timeout="240" timestamp="0">
+    <list key="app-engine-server-modules-list" value0="org.eclipse.jst.jee.server:test"/>
+    <list key="modules" value0="test::org.eclipse.jst.jee.server:test::jst.web::3.1"/>
+  </server>
+  <server auto-publish-setting="2" auto-publish-time="0" hostname="localhost" id="App Engine Standard at localhost (4)" name="App Engine Standard at localhost (4)" runtime-id="App Engine Standard Runtime" server-type="com.google.cloud.tools.eclipse.appengine.standard.server" server-type-id="com.google.cloud.tools.eclipse.appengine.standard.server" start-timeout="240" stop-timeout="240" timestamp="0">
+    <list key="app-engine-server-modules-list" value0="org.eclipse.jst.jee.server:review-test"/>
+    <list key="modules" value0="review-test::org.eclipse.jst.jee.server:review-test::jst.web::3.1"/>
+  </server>
+  <server auto-publish-setting="2" auto-publish-time="0" hostname="localhost" id="App Engine Standard at localhost (5)" name="App Engine Standard at localhost (5)" runtime-id="App Engine Standard Runtime" server-type="com.google.cloud.tools.eclipse.appengine.standard.server" server-type-id="com.google.cloud.tools.eclipse.appengine.standard.server" start-timeout="240" stop-timeout="240" timestamp="0">
+    <list key="app-engine-server-modules-list" value0="org.eclipse.jst.jee.server:newreview"/>
+    <list key="modules" value0="newreview::org.eclipse.jst.jee.server:newreview::jst.web::3.1"/>
+  </server>
+  <server auto-publish-setting="2" auto-publish-time="0" hostname="localhost" id="App Engine Standard at localhost (6)" name="App Engine Standard at localhost (6)" runtime-id="App Engine Standard Runtime" server-type="com.google.cloud.tools.eclipse.appengine.standard.server" server-type-id="com.google.cloud.tools.eclipse.appengine.standard.server" start-timeout="240" stop-timeout="240" timestamp="0">
+    <list key="app-engine-server-modules-list" value0="org.eclipse.jst.jee.server:vereview"/>
+    <list key="modules" value0="vereview::org.eclipse.jst.jee.server:vereview::jst.web::3.1"/>
+  </server>
+  <server auto-publish-setting="2" auto-publish-time="0" hostname="localhost" id="App Engine Standard at localhost (7)" name="App Engine Standard at localhost (7)" runtime-id="App Engine Standard Runtime" server-type="com.google.cloud.tools.eclipse.appengine.standard.server" server-type-id="com.google.cloud.tools.eclipse.appengine.standard.server" start-timeout="240" stop-timeout="240" timestamp="0">
+    <list key="app-engine-server-modules-list" value0="org.eclipse.jst.jee.server:lastreview"/>
+    <list key="modules" value0="lastreview::org.eclipse.jst.jee.server:lastreview::jst.web::3.1"/>
+  </server>
+</servers>

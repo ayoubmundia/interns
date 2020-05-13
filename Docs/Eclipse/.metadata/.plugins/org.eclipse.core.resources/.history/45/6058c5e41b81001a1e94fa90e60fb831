@@ -1,0 +1,25 @@
+package org.rev.com;
+
+import java.io.IOException;
+import java.lang.System;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet(
+    name = "HelloAppEngine",
+    urlPatterns = {"/hello"}
+)
+public class HelloAppEngine extends HttpServlet {
+
+  @Override
+  public void doGet(HttpServletRequest request, HttpServletResponse response)  throws IOException {	  
+	  System.out.println("hello0");
+  }
+  @Override
+  public void doPost(HttpServletRequest request, HttpServletResponse response) {
+	  System.out.println("hello1");
+  }
+}

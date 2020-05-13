@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1581759831 source:d:\documents\c++\produitmatricielle\main.cpp
+	<conio.h>
+	<stdio.h>
+	<stdlib.h>
+

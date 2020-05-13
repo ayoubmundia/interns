@@ -1,0 +1,12 @@
+[
+  "appengine-endpoints",
+  "objectify",
+  "appengine-api",
+  "containeranalysis",
+  "cloudfirestore",
+  "cloudasset",
+  "googlebiqquerydatatransferapi",
+  "googlebiqqueryapi",
+  "recaptcha",
+  "automl"
+]

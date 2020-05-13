@@ -1,0 +1,136 @@
+package org.rev.com;
+
+import java.io.FileInputStream;
+import com.google.auth.oauth2.GoogleCredentials;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.lang.System;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Executor;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.xml.transform.Source;
+import javax.xml.ws.Binding;
+import javax.xml.ws.Endpoint;
+import javax.xml.ws.EndpointReference;
+
+import org.w3c.dom.Element;
+
+import com.google.api.core.ApiFuture;
+import com.google.cloud.firestore.DocumentReference;
+import com.google.cloud.firestore.DocumentSnapshot;
+import com.google.cloud.firestore.Firestore;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.FirebaseOptions;
+import com.google.firebase.cloud.FirestoreClient;
+import com.googlecode.objectify.annotation.Serialize;
+
+@WebServlet("/hello")
+public class HelloAppEngine extends Endpoint{
+
+  public void doGet(HttpServletRequest request, HttpServletResponse response)  throws IOException {	  
+	  System.out.println("hello0");
+	  FileInputStream serviceAccount =
+			  new FileInputStream("D:\\Documents\\Eclipse\\review\\keykey.json");
+
+	FirebaseOptions options = new FirebaseOptions.Builder()
+	  .setCredentials(GoogleCredentials.fromStream(serviceAccount))
+	  .setDatabaseUrl("https://review-18555.firebaseio.com")
+	  .build();
+	FirebaseApp.initializeApp(options);
+	Firestore db = FirestoreClient.getFirestore();
+	
+	DocumentReference docRef = db.collection("REVIEWS").document("+212661080484-veriphone.io");
+	ApiFuture<DocumentSnapshot> reviews = docRef.get();
+	DocumentSnapshot documentReviews;
+	try {
+		documentReviews = reviews.get();
+		System.out.println(documentReviews.getData());
+	} catch (InterruptedException | ExecutionException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	
+  }
+  public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+	  System.out.println("hello1");
+  }
+@Override
+public Binding getBinding() {
+	// TODO Auto-generated method stub
+	System.out.println("hello1");
+	return null;
+}
+@Override
+public EndpointReference getEndpointReference(Element... referenceParameters) {
+	// TODO Auto-generated method stub
+	System.out.println("hello2");
+	return null;
+}
+@Override
+public <T extends EndpointReference> T getEndpointReference(Class<T> clazz, Element... referenceParameters) {
+	// TODO Auto-generated method stub
+	return null;
+}
+@Override
+public Executor getExecutor() {
+	// TODO Auto-generated method stub
+	
+	return null;
+}
+@Override
+public Object getImplementor() {
+	// TODO Auto-generated method stub
+	return null;
+}
+@Override
+public List<Source> getMetadata() {
+	// TODO Auto-generated method stub
+	return null;
+}
+@Override
+public Map<String, Object> getProperties() {
+	// TODO Auto-generated method stub
+	return null;
+}
+@Override
+public boolean isPublished() {
+	// TODO Auto-generated method stub
+	return false;
+}
+@Override
+public void publish(String address) {
+	// TODO Auto-generated method stub
+	
+}
+@Override
+public void publish(Object serverContext) {
+	// TODO Auto-generated method stub
+	
+}
+@Override
+public void setExecutor(Executor executor) {
+	// TODO Auto-generated method stub
+	
+}
+@Override
+public void setMetadata(List<Source> metadata) {
+	// TODO Auto-generated method stub
+	
+}
+@Override
+public void setProperties(Map<String, Object> properties) {
+	// TODO Auto-generated method stub
+	
+}
+@Override
+public void stop() {
+	// TODO Auto-generated method stub
+	
+}
+}

@@ -1,0 +1,29 @@
+[debug] [2020-04-07T21:24:02.131Z] ----------------------------------------------------------------------
+[debug] [2020-04-07T21:24:02.134Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\LENOVO\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve -p 2020
+[debug] [2020-04-07T21:24:02.134Z] CLI Version:   8.0.2
+[debug] [2020-04-07T21:24:02.134Z] Platform:      win32
+[debug] [2020-04-07T21:24:02.134Z] Node Version:  v12.14.0
+[debug] [2020-04-07T21:24:02.150Z] Time:          Tue Apr 07 2020 22:24:02 GMT+0100 (GMT+01:00)
+[debug] [2020-04-07T21:24:02.151Z] ----------------------------------------------------------------------
+[debug] [2020-04-07T21:24:02.151Z] 
+[debug] [2020-04-07T21:24:02.189Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-04-07T21:24:02.190Z] > authorizing via signed-in user
+[debug] [2020-04-07T21:24:02.190Z] [iam] checking project review-18555 for permissions ["firebase.projects.get"]
+[debug] [2020-04-07T21:24:02.192Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-04-07T21:24:02.193Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-04-07T21:24:06.695Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 07 Apr 2020 21:24:07 GMT","server":"scaffolding on HTTPServer2","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-04-07T21:24:06.713Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/review-18555:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2020-04-07T21:24:08.141Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 07 Apr 2020 21:24:08 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=733","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-04-07T21:24:08.143Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/review-18555  
+ 
+[debug] [2020-04-07T21:24:09.381Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 07 Apr 2020 21:24:09 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Serving from 'E:\Ayoub\AMEDDAH-AYOUB\AYOUB\Mundiapolis\ACI\2ACI\Stage\Review\APP'...
+[info] 
+[debug] [2020-04-07T21:24:09.398Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/review-18555/webApps/-/config  
+ 
+[debug] [2020-04-07T21:24:10.798Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 07 Apr 2020 21:24:10 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting: Serving hosting files from: review
+[info] +  hosting: Local server: http://localhost:2020

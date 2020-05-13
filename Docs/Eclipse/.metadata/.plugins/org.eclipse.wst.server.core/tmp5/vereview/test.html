@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="utf-8">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="assets/css/bootstrap.css" rel="stylesheet">
+  <link href="assets/css/font-awesome.css" rel="stylesheet">
+  <link href="assets/css/docs.css" rel="stylesheet" >
+  <link href="bootstrap-social.css" rel="stylesheet" >
+  <title>GameGuidez</title>
+</head>
+<body class="grey lighten-3">
+
+  <!-- NAVBAR -->
+  <nav class="z-depth-0 blue lighten-5">
+    <div class="nav-wrapper container">
+      <ul id="nav-mobile">
+          <li class="logged-in" style="display: none;">
+            <a href="#" class="text-dark modal-trigger h3" data-target="modal-account">Account</a>
+          </li>
+          <li class="logged-in" style="display: none;">
+            <a href="#" class="text-dark h5" id="logout">Logout</a>
+          </li>
+          <li class="logged-in" style="display: none;">
+            <a href="#" class="text-dark modal-trigger h3" data-target="modal-create">Create Guide</a>
+          </li>
+          <li class="logged-out" style="display: none;">
+            <a href="#" class="text-dark modal-trigger h3" data-target="modal-login">Login</a>
+          </li>
+          <li class="logged-out" style="display: none;">
+            <a href="#" class="text-dark modal-trigger h3" data-target="modal-signup">Sign up</a>
+          </li>
+          <li class="logged-out" style="display: none;">
+            <a href="#" class="text-dark modal-trigger h3" data-target="modal-social">Sign up with social</a>
+          </li>
+        </span>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- SIGN UP MODAL -->
+  <div id="modal-signup" class="modal" style="width: 400px; height: 270px;">
+    <div class="modal-content" style="width: 400px; height: 270px;">
+      <h4>Sign up</h4><br />
+      <form id="signup-form">
+        <div class="input-field">
+          <input type="email" id="signup-email" required />
+          <label for="signup-email">Email address</label>
+        </div>
+        <div class="input-field">
+          <input type="password" id="signup-password" required />
+          <label for="signup-password">Choose password</label>
+        </div>
+        <br>
+        <button class="btn blue darken-2 z-depth-0">Sign up</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Social SIGN UP MODAL -->
+  <div id="modal-social" class="modal" style="width: 400px; height: 400px;">
+    <div class="modal-content" style="width: 400px; height: 400px;">
+      <h1>Social SignUp</h1></br>
+      <button type="button" id="SignUp-google" onclick="GoogleSignUp()" class="btn btn-block btn-social btn-google"><span class="fa fa-facebook"></span>Sign up with Google</button>
+      <button type="button" id="SignUp-Fb" onclick="FbSignUp()" class="btn btn-block btn-social btn-facebook"><span class="fa fa-facebook"></span>Sign up with Facebook</button>
+      <button type="button" id="SignUp-Github" onclick="GitHubSignUp()" class="btn btn-block btn-social btn-github"><span class="fa fa-facebook"></span>Sign up with GitHub</button>
+      <button type="button" id="SignUp-Twitter" onclick="TwitterSignUp()" class="btn btn-block btn-social btn-twitter"><span class="fa fa-facebook"></span>Sign up with Twitter</button>
+      <button type="button" id="SignUp-Apple" onclick="AppleSignUp()" class="btn btn-block btn-social btn-google"><span class="fa fa-facebook"></span>Sign up with Apple</button>
+      <button type="button" id="SignUp-Microsoft" onclick="MicrosoftSignUp()" class="btn btn-block btn-social btn-microsoft"><span class="fa fa-facebook"></span>Sign up with Microsoft</button>
+      <button type="button" id="SignUp-Yahoo" onclick="YahooSignUp()" class="btn btn-block btn-social btn-yahoo"><span class="fa fa-facebook"></span>Sign up with Yahoo</button>
+    </div>
+  </div>
+
+  <!-- LOGIN MODAL -->
+  <div id="modal-login" class="modal" style="width: 400px; height: 270px;">
+    <div class="modal-content" style="width: 400px; height: 270px;">
+      <h4>Login</h4><br />
+      <form id="login-form">
+        <div class="input-field">
+          <input type="email" id="login-email" required/>
+          <label for="login-email">Email address</label>
+        </div>  
+        <div class="input-field">
+          <input type="password" id="login-password" required/>
+          <label for="login-password">Your password</label>
+        </div>
+        <br>
+        <button class="btn blue darken-2 z-depth-0">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ACCOUNT MODAL -->
+  <div id="modal-account" class="modal">
+    <div class="modal-content center-align">
+      <h4>Account details</h4><br />
+      <div class="account-details"></div>
+    </div>
+  </div>
+
+  <!-- CREATE GUIDE MODAL -->
+  <div id="modal-create" class="modal">
+    <div class="modal-content">
+      <h4>Create Guide</h4><br />
+      <form id="create-form">
+        <div class="input-field">
+          <input type="text" id="title" required>
+          <label for="title">Guide Title</label>
+        </div>
+        <div class="input-field">
+          <textarea id="content" class="materialize-textarea" required></textarea>
+          <label for="content">Guide Content</label>
+        </div>
+        <button class="btn yellow darken-2 z-depth-0">Create</button>
+      </form>
+    </div>
+  </div>
+
+  
+  
+  <!-- Compiled and minified JavaScript -->
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-firestore.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-analytics.js"></script>
+
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+    apiKey: "AIzaSyCwig6J847UiOAT6uEDsQWqudWSZnNyJBQ",
+    authDomain: "newreview-a4a29.firebaseapp.com",
+    databaseURL: "https://newreview-a4a29.firebaseio.com",
+    projectId: "newreview-a4a29",
+    storageBucket: "newreview-a4a29.appspot.com",
+    messagingSenderId: "576345031501",
+    appId: "1:576345031501:web:efdaa50b05fcfdc26aad04",
+    measurementId: "G-ZGBQV5PZ0D"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
+    // Make auth and firestore references
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+
+    // Update firestore settings 
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="scripts/auth.js"></script>
+  <script src="scripts/index.js"></script>
+  <script src="assets/js/jquery.js"></script>
+  <script src="assets/js/docs.js"></script>
+</body>
+</html>

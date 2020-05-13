@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js" charset="utf-8"></script>
+    <script src="js/rater.js" charset="utf-8"></script>
+    <script>
+        $(document).ready(function(){
+            $(".rate").rate();
+
+            $(".rate").rate("setFace", 5, '😊');
+            $(".rate").rate("setFace", 1, '😒');
+        });
+    </script>
+
+    <style>
+        body
+        {
+            font-size: 35px;
+            font-family: sans-serif;
+        }
+        .rate-base-layer
+        {
+            color: orange;
+        }
+        .rate-hover-layer
+        {
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="rate"></div>
+</body>
+</html>

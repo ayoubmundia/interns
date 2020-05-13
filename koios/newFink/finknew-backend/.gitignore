@@ -1,0 +1,8 @@
+.env
+node_modules/
+docs/
+.idea/
+script-search.es
+uploads
+private.key
+public.key

@@ -1,0 +1,67 @@
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.ExecutionException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.google.api.core.ApiFuture;
+import com.google.auth.oauth2.GoogleCredentials;
+import com.google.cloud.firestore.DocumentReference;
+import com.google.cloud.firestore.Firestore;
+import com.google.cloud.firestore.WriteResult;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.FirebaseOptions;
+import com.google.firebase.cloud.FirestoreClient;
+import com.google.gson.Gson;
+
+
+@WebServlet("/evaluate")
+public class Review extends HttpServlet {
+	private Firestore db;
+	
+	@Override
+	public void init() {
+		try {
+			FileInputStream serviceAccount = new FileInputStream("D:\\\\Docs\\\\Eclipse\\\\review\\\\keykey.json");
+			FirebaseOptions options = new FirebaseOptions.Builder()
+					  .setCredentials(GoogleCredentials.fromStream(serviceAccount))
+					  .setDatabaseUrl("https://vereview.firebaseio.com")
+					  .build();
+			FirebaseApp.initializeApp(options);
+			db = FirestoreClient.getFirestore();
+			System.out.println("ICI");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
+//	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+//		doPost(request, response);
+//	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException{
+        String Data = request.getParameter("jsonData");
+        System.out.println(Data);
+		try {
+			setReview(Data);
+		} catch (InterruptedException | ExecutionException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+	public void setReview(String dataReviw) throws InterruptedException, ExecutionException {
+		
+	}
+}
+
+
